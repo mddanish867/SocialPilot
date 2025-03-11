@@ -149,7 +149,7 @@ const RegisterPage = () => {
         {/* Right Side - Blue Illustration */}
         <div className="hidden md:block w-1/2 bg-blue-600 p-12 relative">
           <div className="h-full flex flex-col justify-center items-center text-white relative z-10">
-            <div className="max-w-md">
+            <div className="mt-96 max-w-md">
               <h2 className="text-2xl font-bold mb-2">{slides[currentSlide].title}</h2>
               <p className="text-blue-100">{slides[currentSlide].description}</p>
             </div>
@@ -188,7 +188,7 @@ const RegisterPage = () => {
             </div>
             
             {/* Dots for Slider */}
-            <div className="absolute bottom-10 left-0 w-full flex justify-center space-x-2">
+            <div className="-bottom-2 absolute left-0 w-full flex justify-center space-x-2">
               {slides.map((_, index) => (
                 <button
                   key={index}
