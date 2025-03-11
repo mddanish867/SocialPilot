@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEye, FaEyeSlash, FaGoogle, FaFacebook } from 'react-icons/fa';
-
+import { CircleDashed } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -39,12 +40,11 @@ const RegisterPage = () => {
         <div className="w-full md:w-1/2 p-8 md:p-12">
           <div className="mb-8">
             <div className="flex items-center mb-6">
-              <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-2">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="currentColor">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                </svg>
-              </div>
+              <Link to="/" className="flex items-center space-x-2">
+              <CircleDashed className="w-6 h-6 font-bold text-blue-600 rounded flex items-center justify-center mr-2"/>             
+              
               <span className="text-lg font-semibold text-gray-800">SocialPilot</span>
+              </Link>
             </div>
             <h1 className="text-2xl font-bold text-gray-800 mb-1">Log in to your Account</h1>
             <p className="text-gray-600 text-sm">Welcome back! Good to see you again.</p>
