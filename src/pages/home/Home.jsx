@@ -1,4 +1,5 @@
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import { useState } from 'react';
 import {
   BarChart3,
   Calendar,
@@ -15,13 +16,14 @@ import {
 } from "lucide-react"
 
 export default function LandingPage() {
+    const [activeHover, setActiveHover] = useState(null);
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <BarChart3 className="h-6 w-6 text-blue-600" />
-            <span className="text-xl font-bold text-blue-600">SocialPro</span>
+            <span className="text-xl font-bold text-blue-600">SocialPilot</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#features" className="text-sm font-medium text-gray-600 hover:text-blue-600">
@@ -38,10 +40,12 @@ export default function LandingPage() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link to="/login" className="hidden sm:block text-sm font-medium text-gray-600 hover:text-blue-600">
+            <Link to="/login" className="hidden sm:block  font-medium text-blue-500 bg-blue-500/30 rounded-md px-4 py-2 hover:text-blue-600">
               Log in
             </Link>
-            <button className="bg-blue-600 hover:bg-blue-700">Get Started</button>
+            <button 
+             className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 mr-2 py-2 rounded-md shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 w-full sm:w-auto"
+             >Get Started</button>
           </div>
         </div>
       </header>
@@ -61,26 +65,37 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <button className="bg-blue-600 hover:bg-blue-700">Start Free Trial</button>
-                  <button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50">
+                {activeHover && (
+          <div 
+            className="absolute rounded-full bg-blue-300 opacity-20 blur-xl transition-all duration-500 ease-in-out"
+            style={{
+              width: '150px',
+              height: '150px',
+              left: `${activeHover.offsetX}px`,
+              top: `${activeHover.offsetY}px`,
+            }}
+          />
+        )}
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-md text-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 w-full sm:w-auto"
+                  onMouseEnter={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    setActiveHover({
+                      left: rect.left + rect.width/2,
+                      top: rect.top + rect.height/2
+                    });
+                  }}
+                  onMouseLeave={() => setActiveHover(null)}
+                  >Start Free Trial</button>
+                  <button className="bg-blue-500/30  hover:bg-blue-600/30 text-blue-500 font-medium px-6 py-3 rounded-md text-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 w-full sm:w-auto">
                     Watch Demo
                   </button>
                 </div>
-                <div className="flex items-center space-x-4 text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <CheckCircle className="mr-1 h-4 w-4 text-blue-600" />
-                    <span>No credit card required</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="mr-1 h-4 w-4 text-blue-600" />
-                    <span>14-day free trial</span>
-                  </div>
-                </div>
+                
               </div>
               <div className="flex items-center justify-center">
                 <div className="relative w-full max-w-[500px] overflow-hidden rounded-xl border border-blue-100 bg-white shadow-xl">
                   <img
-src="/react.svg"
+src="/vite.svg"
                     width={800}
                     height={600}
                     alt="Dashboard preview"
@@ -101,35 +116,35 @@ src="/react.svg"
               </div>
               <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
                 <img
-                 src="/react.svg"
+                 src="/vite.svg"
                   width={120}
                   height={40}
                   alt="Company logo"
                   className="h-8 w-auto opacity-70 grayscale"
                 />
                 <img
-                  src="/react.svg"
+                  src="/vite.svg"
                   width={120}
                   height={40}
                   alt="Company logo"
                   className="h-8 w-auto opacity-70 grayscale"
                 />
                 <img
-                  src="/react.svg"
+                  src="/vite.svg"
                   width={120}
                   height={40}
                   alt="Company logo"
                   className="h-8 w-auto opacity-70 grayscale"
                 />
                 <img
-                  src="/react.svg"
+                  src="/vite.svg"
                   width={120}
                   height={40}
                   alt="Company logo"
                   className="h-8 w-auto opacity-70 grayscale"
                 />
                 <img
-                  src="/react.svg"
+                  src="/vite.svg"
                   width={120}
                   height={40}
                   alt="Company logo"
@@ -271,7 +286,7 @@ src="/react.svg"
               <div className="flex items-center justify-center">
                 <div className="relative w-full max-w-[500px] overflow-hidden rounded-xl border border-blue-100 bg-white shadow-xl">
                   <img
-                    src="/react.svg"
+                    src="/vite.svg"
                     width={800}
                     height={600}
                     alt="Platform integration preview"
@@ -415,7 +430,7 @@ src="/react.svg"
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">Testimonials</div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Loved by businesses worldwide</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  See what our customers have to say about SocialPro.
+                  See what our customers have to say about SocialPilot.
                 </p>
               </div>
             </div>
@@ -424,7 +439,7 @@ src="/react.svg"
                 <div className="flex items-center space-x-2">
                   <div className="flex-shrink-0">
                     <img
-                      src="/react.svg"
+                      src="/vite.svg"
                       width={40}
                       height={40}
                       alt="User avatar"
@@ -437,7 +452,7 @@ src="/react.svg"
                   </div>
                 </div>
                 <p className="mt-4 text-sm text-gray-600">
-                  "SocialPro has transformed how we manage our social media. We've seen a 40% increase in engagement
+                  "SocialPilot has transformed how we manage our social media. We've seen a 40% increase in engagement
                   since we started using it."
                 </p>
               </div>
@@ -445,7 +460,7 @@ src="/react.svg"
                 <div className="flex items-center space-x-2">
                   <div className="flex-shrink-0">
                     <img
-                      src="/react.svg"
+                      src="/vite.svg"
                       width={40}
                       height={40}
                       alt="User avatar"
@@ -466,7 +481,7 @@ src="/react.svg"
                 <div className="flex items-center space-x-2">
                   <div className="flex-shrink-0">
                     <img
-                      src="/react.svg"
+                      src="/vite.svg"
                       width={40}
                       height={40}
                       alt="User avatar"
@@ -479,7 +494,7 @@ src="/react.svg"
                   </div>
                 </div>
                 <p className="mt-4 text-sm text-gray-600">
-                  "As a small business owner, SocialPro has saved me countless hours. I can now manage all my accounts
+                  "As a small business owner, SocialPilot has saved me countless hours. I can now manage all my accounts
                   in just 30 minutes a day."
                 </p>
               </div>
@@ -496,7 +511,7 @@ src="/react.svg"
                   Ready to transform your social media strategy?
                 </h2>
                 <p className="max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join thousands of businesses that use SocialPro to grow their social presence.
+                  Join thousands of businesses that use SocialPilot to grow their social presence.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -525,7 +540,7 @@ src="/react.svg"
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <BarChart3 className="h-6 w-6 text-blue-600" />
-                <span className="text-xl font-bold text-blue-600">SocialPro</span>
+                <span className="text-xl font-bold text-blue-600">SocialPilot</span>
               </div>
               <p className="text-sm text-gray-500">
                 The all-in-one social media management platform for businesses of all sizes.
