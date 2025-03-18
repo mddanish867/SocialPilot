@@ -41,11 +41,11 @@ const LoginPage = () => {
                     <div className="mb-8">
                         <div className="flex items-center mb-6">
                             <Link to="/" className="flex items-center space-x-2">
-                                <div className="w-8 h-8 rounded-full border-2 border-dashed border-blue-500 flex items-center justify-center">
-                                    <span className="text-blue-500 font-bold">SP</span>
-                                </div>
-                                <span className="ml-2 text-gray-800 font-bold">SocialPilot</span>
-                            </Link>
+                                            <div className="w-8 h-8 rounded-full border-2 border-dashed border-orange-500 flex items-center justify-center">
+                                              <span className="text-orange-500 font-bold">SP</span>
+                                            </div>
+                                            <span className="ml-2 text-black font-bold">SocialPilot</span>
+                                          </Link>
                         </div>
                         <h1 className="text-2xl font-bold text-gray-800 mb-1">Log in to your Account</h1>
                         <p className="text-gray-600 text-sm">Welcome back! Good to see you again.</p>
@@ -59,7 +59,7 @@ const LoginPage = () => {
                                 <span className="text-sm">Google</span>
                             </button>
                             <button className="flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
-                                <FaFacebook className="mr-2 text-blue-600" />
+                                <FaFacebook className="mr-2 text-pink-600" />
                                 <span className="text-sm">Facebook</span>
                             </button>
                         </div>
@@ -81,7 +81,7 @@ const LoginPage = () => {
                                 </div>
                                 <input
                                     type="email"
-                                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-range-400"
                                     placeholder="Email"
                                 />
                             </div>
@@ -97,7 +97,7 @@ const LoginPage = () => {
                                 </div>
                                 <input
                                     type={showPassword ? "text" : "password"}
-                                    className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-range-400"
                                     placeholder="Password"
                                 />
                                 <button
@@ -116,14 +116,14 @@ const LoginPage = () => {
                                 <input
                                     id="remember-me"
                                     type="checkbox"
-                                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                                    className="h-4 w-4 text-pink-600 focus:ring-range-400 border-gray-300 rounded"
                                 />
                                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-600">
                                     Remember me
                                 </label>
                             </div>
                             <div>
-                                <a href="#" className="text-sm text-blue-600 hover:underline">
+                                <a href="#" className="text-sm text-pink-600 hover:underline">
                                     Forgot Password?
                                 </a>
                             </div>
@@ -132,7 +132,7 @@ const LoginPage = () => {
                         {/* Login Button */}
                         <button
                             type="button"
-                            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors"
+                            className="w-full py-2 px-4 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-md transition-colors"
                         >
                             Log in
                         </button>
@@ -140,26 +140,26 @@ const LoginPage = () => {
                         {/* Create Account Link */}
                         <div className="text-center text-sm mt-4">
                             <span className="text-gray-600">Don't have an account? </span>
-                            <a href="/register" className="text-blue-600 hover:underline font-medium">
+                            <a href="/register" className="text-pink-600 hover:underline font-medium">
                                 Create an account
                             </a>
                         </div>
                     </div>
                 </div>
 
-                {/* Right Side - Blue Illustration */}
-                <div className="hidden md:block w-1/2 bg-blue-600 p-12 relative">
+                {/* Right Side - pink Illustration */}
+                <div className="hidden md:block w-1/2 bg-pink-400 p-12 relative">
                     <div className="h-full flex flex-col justify-center items-center text-white relative z-10">
                         <div className="mt-96 max-w-md">
                             <h2 className="text-2xl font-bold mb-2">{slides[currentSlide].title}</h2>
-                            <p className="text-blue-100">{slides[currentSlide].description}</p>
+                            <p className="text-pink-100">{slides[currentSlide].description}</p>
                         </div>
 
                         {/* Illustration */}
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64">
-                            <div className="w-full h-full bg-blue-500 bg-opacity-20 rounded-full absolute"></div>
+                            <div className="w-full h-full bg-pink-500 bg-opacity-30 rounded-full absolute"></div>
                             <div className="absolute top-1/4 right-0 bg-white rounded-lg p-2 shadow-lg">
-                                <div className="w-6 h-6 bg-blue-400 rounded-full mb-1"></div>
+                                <div className="w-6 h-6 bg-pink-300 rounded-full mb-1"></div>
                                 <div className="w-20 h-2 bg-gray-200 rounded-full mb-1"></div>
                                 <div className="w-16 h-2 bg-gray-200 rounded-full"></div>
                             </div>
@@ -170,7 +170,7 @@ const LoginPage = () => {
                                         <div className="w-16 h-2 bg-gray-200 rounded-full"></div>
                                     </div>
                                     <div className="flex items-center mb-4">
-                                        <div className="w-6 h-6 bg-orange-400 rounded-full mr-2"></div>
+                                        <div className="w-6 h-6 bg-pink-300 rounded-full mr-2"></div>
                                         <div className="w-16 h-2 bg-gray-200 rounded-full"></div>
                                     </div>
                                     <div className="flex items-center">
@@ -180,7 +180,7 @@ const LoginPage = () => {
                                 </div>
                             </div>
                             <div className="absolute top-0 left-8 bg-white p-2 rounded-full shadow-lg">
-                                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center">
                                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                                     </svg>
@@ -193,7 +193,7 @@ const LoginPage = () => {
                             {slides.map((_, index) => (
                                 <button
                                     key={index}
-                                    className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-white" : "bg-blue-300"
+                                    className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-white" : "bg-pink-300"
                                         }`}
                                     onClick={() => setCurrentSlide(index)}
                                 ></button>

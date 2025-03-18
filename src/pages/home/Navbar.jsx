@@ -1,75 +1,43 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { CircleDashed } from "lucide-react";
 
 // The key change: accept activeTab as a prop instead of managing it internally
-const Navbar = ({ activeTab }) => {
-  const platforms = {
-    instagram: {
-      color: 'from-purple-600 to-pink-600',
-    },
-    twitter: {
-      color: 'from-blue-400 to-blue-600',
-    },
-    linkedin: {
-      color: 'from-blue-600 to-blue-800',
-    },
-    tiktok: {
-      color: 'from-black to-gray-800',
-    }
-  };
+const Navbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full  bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
-        <div className="relative">
-          {/* Background element with matching gradient */}
-          <div className="absolute inset-0 w-full h-full">
-            <div className={`absolute inset-0 opacity-20 bg-gradient-to-br ${platforms[activeTab].color} transition-all duration-1000 ease-in-out`}></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)]"></div>
-          </div>
-          
-          <div className="container relative z-10 flex h-16 items-center justify-between">
-            <div className="ml-4 flex items-center">
+      {/* Navigation */}
+      <div className="p-4">
+        <nav className="flex justify-center mb-12">
+          <div className="bg-black rounded-full px-6 py-2 flex items-center justify-between w-full max-w-xl">
+            <div className="flex items-center gap-2">
               <Link to="/" className="flex items-center space-x-2">
-                <div className={`w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r ${platforms[activeTab].color} transition-all duration-300`}>
-                  <CircleDashed className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 rounded-full border-2 border-dashed border-orange-500 flex items-center justify-center">
+                  <span className="text-orange-500 font-bold">SP</span>
                 </div>
-                <span className="text-lg font-semibold text-white">SocialPilot</span>
+                <span className="ml-2 text-white font-bold">SocialPilot</span>
               </Link>
             </div>
-            
-            <nav className="hidden md:flex gap-6">
-              <Link to="#features" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">
-                Features
+            <div className="flex items-center gap-6">
+              <Link to="#" className="text-white text-sm hover:text-gray-300">
+                Home
               </Link>
-              <Link to="#how-it-works" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">
-                How It Works
+              <Link to="#" className="text-white text-sm hover:text-gray-300">
+                About
               </Link>
-              <Link to="#pricing" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">
-                Pricing
+              <Link to="#" className="text-white text-sm hover:text-gray-300">
+                Support
               </Link>
-              <Link to="#testimonials" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">
-                Testimonials
+              <Link to="#" className="text-white text-sm hover:text-gray-300">
+                Download
               </Link>
-            </nav>
-            
-            <div className="flex items-center gap-4">
-              <Link to="/login" className="hidden sm:block font-medium text-white bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-white/20 transition-all duration-300">
-                Log in
+              <Link to="login" className="bg-white font-semibold text-black hover:bg-gray-100 rounded-full text-md px-4 py-1">
+                Login
               </Link>
-              <button
-                className={`relative overflow-hidden group bg-gradient-to-r ${platforms[activeTab].color} text-white font-medium px-6 mr-4 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-opacity-50 w-full sm:w-auto`}
-                style={{ 
-                  boxShadow: `0 8px 16px -4px rgba(${activeTab === 'instagram' ? '236, 72, 153' : activeTab === 'twitter' ? '59, 130, 246' : activeTab === 'linkedin' ? '37, 99, 235' : '0, 0, 0'}, 0.3)` 
-                }}
-              >
-                <span className="relative z-10">Get Started</span>
-              </button>
             </div>
           </div>
-        </div>
-      </header>
+        </nav>
+      </div>
     </>
   );
 };
