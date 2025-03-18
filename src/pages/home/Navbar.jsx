@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navigation */}
-      <div className="p-4">
+      
         <nav className="flex justify-center mb-12">
           <div className="bg-black rounded-full px-6 py-2 flex items-center justify-between w-full max-w-xl">
             <div className="flex items-center gap-2">
@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-      </div>
+      
     </>
   );
 };

@@ -59,7 +59,7 @@ const LoginPage = () => {
                                 <span className="text-sm">Google</span>
                             </button>
                             <button className="flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
-                                <FaFacebook className="mr-2 text-pink-600" />
+                                <FaFacebook className="mr-2 text-blue-600" />
                                 <span className="text-sm">Facebook</span>
                             </button>
                         </div>
