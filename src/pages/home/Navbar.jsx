@@ -15,20 +15,20 @@ const Navbar = () => {
                 <div className="w-8 h-8 rounded-full border-2 border-dashed border-orange-500 flex items-center justify-center">
                   <span className="text-orange-500 font-bold">SP</span>
                 </div>
-                <span className="ml-2 text-white font-bold">SocialPilot</span>
+                <span className="ml-2 text-white font-bold">SocialPilot</span>dheeraj
               </Link>
             </div>
             <div className="flex items-center gap-6">
-              <Link to="#" className="text-white text-sm hover:text-gray-300">
+              <Link to="#" className="hidden md:flex text-white text-sm hover:text-gray-300">
                 Home
               </Link>
-              <Link to="#" className="text-white text-sm hover:text-gray-300">
+              <Link to="#" className="hidden md:flex text-white text-sm hover:text-gray-300">
                 About
               </Link>
-              <Link to="#" className="text-white text-sm hover:text-gray-300">
+              <Link to="#" className="hidden md:flex text-white text-sm hover:text-gray-300">
                 Support
               </Link>
-              <Link to="#" className="text-white text-sm hover:text-gray-300">
+              <Link to="#" className="hidden md:flex text-white text-sm hover:text-gray-300">
                 Download
               </Link>
               <Link to="login" className="bg-white font-semibold text-black hover:bg-gray-100 rounded-full text-md px-4 py-1">
