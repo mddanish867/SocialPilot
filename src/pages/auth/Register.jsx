@@ -27,9 +27,9 @@ const RegisterPage = () => {
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-2">
                 <div className="w-8 h-8 rounded-full border-2 border-dashed border-blue-500 flex items-center justify-center">
-                  <span className="text-blue-500 font-bold">SP</span>
+                  <span className="text-blue-500 font-bold">PB</span>
                 </div>
-                <span className="ml-2 text-gray-800 font-bold">SocialPilot</span>
+                <span className="ml-2 text-gray-800 font-bold">PaperBrain</span>
               </Link>
             </div>
           </div>

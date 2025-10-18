@@ -42,9 +42,9 @@ const LoginPage = () => {
                         <div className="flex items-center mb-6">
                             <Link to="/" className="flex items-center space-x-2">
                                 <div className="w-8 h-8 rounded-full border-2 border-dashed border-orange-500 flex items-center justify-center">
-                                    <span className="text-orange-500 font-bold">SP</span>
+                                    <span className="text-orange-500 font-bold">PB</span>
                                 </div>
-                                <span className="ml-2 text-black font-bold">SocialPilot</span>
+                                <span className="ml-2 text-black font-bold">PaperBrain</span>
                             </Link>
                         </div>
                         <h1 className="text-2xl font-bold text-gray-800 mb-1">Log in to your Account</h1>

@@ -8,13 +8,17 @@ import Pricing from "./Pricing";
 import Testimonals from "./Testimonals";
 import CTS from "./CTS";
 import Footer from "./Footer";
+import Navbar from "../../pages/home/Navbar";
 
 const LandingPage = () => {   
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col">
             {/* Pass the activeTab state to both components */}
-          
-            <Hero/>
+          <div className='bg-gradient-to-br from-white via-pink-300 to-orange-500'>
+                <Navbar  />
+                   <Hero/>
+          </div>
+         
             <main className="flex-1">
 
                 {/* Logos Section */}
