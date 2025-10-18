@@ -1,5 +1,4 @@
 // src/components/DashboardPreview.js
-import React from 'react';
 
 const DashboardPreview = () => {
   return (

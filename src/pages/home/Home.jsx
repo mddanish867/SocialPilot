@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Hero from "./Hero";
 import Client from "./Client";
 import Features from "./Features";
@@ -10,41 +10,40 @@ import CTS from "./CTS";
 import Footer from "./Footer";
 import Navbar from "../../pages/home/Navbar";
 
-const LandingPage = () => {   
-    return (
-        <div className="flex flex-col">
-            {/* Pass the activeTab state to both components */}
-          <div className='bg-gradient-to-br from-white via-pink-300 to-orange-500'>
-                <Navbar  />
-                   <Hero/>
-          </div>
-         
-            <main className="flex-1">
+const LandingPage = () => {
+  return (
+    <div className="flex flex-col">
+      {/* Pass the activeTab state to both components */}
+      <div className="bg-gradient-to-br from-white via-pink-300 to-orange-500">
+        <Navbar />
+        <Hero />
+      </div>
 
-                {/* Logos Section */}
-                <Client />
+      
+        {/* Logos Section */}
+        <Client />
 
-                {/* Features Section */}
-                <Features />
+        {/* Features Section */}
+        <Features />
 
-                {/* How It Works Section */}
-                <HowItWorks />
+        {/* How It Works Section */}
+        <HowItWorks />
 
-                {/* Platforms Section */}
-                <Platforms />
+        {/* Platforms Section */}
+        <Platforms />
 
-                {/* Pricing Section */}
-                <Pricing />
+        {/* Pricing Section */}
+        <Pricing />
 
-                {/* Testimonials Section */}
-                <Testimonals />
+        {/* Testimonials Section */}
+        <Testimonals />
 
-                {/* CTA Section */}
-                <CTS />
-            </main>
-            <Footer />
-        </div>
-    );
+        {/* CTA Section */}
+        <CTS />
+ 
+      <Footer />
+    </div>
+  );
 };
 
 export default LandingPage;
